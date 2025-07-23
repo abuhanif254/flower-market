@@ -15,7 +15,28 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #F8F8F8;} /* Light gray background */
-
+                /* Custom styles for the trusted badge */
+        .trusted-badge {
+            position: absolute;
+            top: -20px; /* Adjust as needed */
+            right: -20px; /* Adjust as needed */
+            width: 80px;
+            height: 80px;
+            background-image: url('assets/hero-flower.png'); /* Placeholder for badge image */
+            background-size: cover;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Hide on mobile */
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .trusted-badge {
+                display: flex; /* Show on desktop */
+            }
+        }
 
 
 
@@ -27,8 +48,8 @@
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo/Website Name -->
             <div class="text-2xl font-bold text-orange-500">
-                <img src="https://placehold.co/40x40/FF7F50/FFFFFF?text=Logo" alt="Logo" class="inline-block mr-2 rounded-full">
-                Flower Shop
+                <img src="assets/logo.png" alt="Logo" class="inline-block mr-2 rounded-full">
+                
             </div>
 
             <!-- Menu Items (Hidden on Mobile, Cart Icon visible) -->
@@ -50,7 +71,23 @@
             </div>
         </div>
     </nav>
-     
+                    <!-- Banner Section -->
+    <section class="container mx-auto py-12 px-4 md:flex items-center justify-between md:space-x-8">
+        <!-- Image (Moves to top on mobile) -->
+        <div class="md:w-1/2 mb-8 md:mb-0 order-first md:order-last">
+            <img src="assets/hero-flower.png" alt="Banner Flower" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <!-- Title and Paragraph -->
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-5xl font-bold text-gray-800 mb-4">ALWAYS <span class="text-orange-500">FRESH FLOWERS</span> </h1>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                Discover vibrant blooms & nature's artistry.  
+                 Freshly grown with passion, delivered with joy.  
+                 Explore our garden's beauty today.
+            </p>
+            
+        </div>
+    </section>
 
 
 </body>
